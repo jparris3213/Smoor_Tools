@@ -1,7 +1,7 @@
 const {Schema, model} = require("mongoose");
 const bcrypt = requrie("bcrypt");
 
-/* Info from typeDefs.js file
+/* Info from typeDefs.js file for reference
 
 const typeDefs = gql`
 type User {
