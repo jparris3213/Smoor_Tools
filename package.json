@@ -1,0 +1,19 @@
+{
+  "name": "smoor_tools",
+  "version": "1.0.0",
+  "description": "Unofficial Tools for a specific LARP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jparris3213/Smoor_Tools.git"
+  },
+  "author": "Jacob Parris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jparris3213/Smoor_Tools/issues"
+  },
+  "homepage": "https://github.com/jparris3213/Smoor_Tools#readme"
+}
