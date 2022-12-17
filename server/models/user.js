@@ -1,5 +1,5 @@
 const {Schema, model} = require("mongoose");
-const bcrypt = requrie("bcrypt");
+const bcrypt = require("bcrypt");
 
 /* Info from typeDefs.js file for reference
 
