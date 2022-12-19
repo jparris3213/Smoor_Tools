@@ -37,3 +37,12 @@ if (process.env.NODE_ENV === "production") {
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, 'build','index.html'));
   });
+
+  //Start server and GraphQL (in theory, I'm a little shaky on GraphQL)
+
+  db.once("open", () => {
+    app.listen(PORT, () => {
+        console.log(`API server running on port http://localhost:${PORT}`);
+        console.log(`Use GraphQL...theoretically at http://localhost:${PORT}${server.graphqlPath}`);
+    })
+  })
