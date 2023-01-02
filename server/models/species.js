@@ -45,7 +45,7 @@ const SpeciesSchema = new Schema({
         required: false,
     },
     skill_adjust: {
-        type: String!,
+        type: String,
         required: false,
     },
     origin: {
