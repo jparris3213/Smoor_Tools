@@ -16,11 +16,11 @@ const { authMiddleware } = require("./utils/auth");
 const PORT = process.env.PORT || 3001;
 
 //set up Apollo Server as a new Class
-
+const app = express();
+// Same ApolloServer initialization as before
+const server = new ApolloServer({ typeDefs, resolvers, context: authMiddleware, });
 
 async function startApolloServer(typeDefs, resolvers) {
-    // Same ApolloServer initialization as before
-    const server = new ApolloServer({ typeDefs, resolvers, context: authMiddleware, });
   
     // Required logic for integrating with Express
     await server.start();
@@ -46,27 +46,10 @@ async function startApolloServer(typeDefs, resolvers) {
      res.sendFile(path.join(__dirname, 'build','index.html'));
     });
     // Modified server startup
-    await new Promise(resolve => app.listen({ port: 4000 }, resolve));
-    console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
+    await new Promise(resolve => app.listen({ port: 3001 }, resolve));
+    console.log(`🚀 Server ready at http://localhost:3001${server.graphqlPath}`);
   }
 
-/* const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-    context: authMiddleware,
-}); */
-/* 
-//apply middleware
-server.applyMiddleware( { app });
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json()); */
-
-
-
-
-
-//Start server and GraphQL (in theory, I'm a little shaky on GraphQL)
 
 db.once("open", () => {
   app.listen(PORT, () => {

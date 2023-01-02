@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const URI = process.env.MONGODB_URL;
+const URI = process.env.MONGODB_URI || "mongodb://localhost/Smoor_Tools";
 
 console.log(URI)
 
